@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewControllerCounters" customModule="Counters" customModuleProvider="target">
+            <connections>
+                <outlet property="capacityLabel" destination="GJO-mK-DTg" id="kCe-No-Sj0"/>
+                <outlet property="capacityNumberLabel" destination="O5u-BE-GDl" id="NxU-Db-f8o"/>
+                <outlet property="countLabel" destination="c18-ue-zFb" id="sCk-dJ-PoP"/>
+                <outlet property="placesLeftCounter" destination="Ktc-MX-dDR" id="eJa-ae-jCK"/>
+                <outlet property="reduceButtonOutlet" destination="hSe-Bc-BFV" id="u3e-kX-ZmM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftBG" translatesAutoresizingMaskIntoConstraints="NO" id="oMh-Is-fcb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleAspectFill" misplaced="YES" distribution="equalSpacing" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="p5F-TX-rMh">
+                    <rect key="frame" x="38" y="472" width="600" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSe-Bc-BFV">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="ItR-br-aBn"/>
+                                <constraint firstAttribute="height" constant="120" id="t9R-lN-yzW"/>
+                            </constraints>
+                            <state key="normal" title="-" image="takeButton">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="reduceButton:" destination="-1" eventType="touchUpInside" id="IW3-sM-z3j"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcT-TJ-frs">
+                            <rect key="frame" x="480" y="0.0" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="0Ky-5i-Iel"/>
+                                <constraint firstAttribute="height" constant="120" id="fLj-YL-18J"/>
+                            </constraints>
+                            <state key="normal" title="+" image="addButton">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="addButton:" destination="-1" eventType="touchUpInside" id="y7m-y6-h9n"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shade" translatesAutoresizingMaskIntoConstraints="NO" id="g42-gu-D4e">
+                    <rect key="frame" x="128" y="355" width="343" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="2ei-nY-hVj"/>
+                        <constraint firstAttribute="width" constant="250" id="CPa-d3-cOn"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="axt-Jl-sbn">
+                    <rect key="frame" x="110" y="137" width="182" height="29"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktc-MX-dDR">
+                            <rect key="frame" x="0.0" y="0.0" width="41" height="29"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                            <color key="textColor" red="0.40784313729999999" green="0.76078431369999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5u-BE-GDl">
+                            <rect key="frame" x="141" y="0.0" width="41" height="29"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                            <color key="textColor" red="0.40784313729999999" green="0.76078431369999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="thc-4D-pfc">
+                    <rect key="frame" x="90" y="174" width="240" height="21"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Places left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auc-io-YGa">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJO-mK-DTg">
+                            <rect key="frame" x="130" y="0.0" width="110" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2500" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c18-ue-zFb">
+                    <rect key="frame" x="122" y="233" width="343" height="133"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="111"/>
+                    <color key="textColor" red="0.97647058819999999" green="0.49019607840000001" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kWq-Lj-s8m">
+                    <rect key="frame" x="24" y="37" width="580" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkF-rK-4DR">
+                            <rect key="frame" x="0.0" y="0.0" width="290" height="40"/>
+                            <state key="normal" image="restartButton"/>
+                            <connections>
+                                <action selector="restartButton:" destination="-1" eventType="touchUpInside" id="gRN-kj-ibg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiK-lk-m2W">
+                            <rect key="frame" x="290" y="0.0" width="290" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="290" id="J5m-gk-Drb"/>
+                            </constraints>
+                            <state key="normal" image="capacityButton"/>
+                            <connections>
+                                <action selector="changeCapacityButton:" destination="-1" eventType="touchUpInside" id="5fQ-8t-SPM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="kWq-Lj-s8m" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="5jP-5l-zJ9"/>
+                <constraint firstItem="p5F-TX-rMh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AA0-r2-myQ"/>
+                <constraint firstAttribute="trailing" secondItem="oMh-Is-fcb" secondAttribute="trailing" id="CcY-OT-oJY"/>
+                <constraint firstAttribute="bottom" secondItem="p5F-TX-rMh" secondAttribute="bottom" id="HxP-mI-EdY"/>
+                <constraint firstItem="g42-gu-D4e" firstAttribute="top" secondItem="c18-ue-zFb" secondAttribute="bottom" constant="-11" id="Ijm-TS-K0G"/>
+                <constraint firstAttribute="trailing" secondItem="kWq-Lj-s8m" secondAttribute="trailing" constant="10" id="PYE-aH-Gh1"/>
+                <constraint firstItem="thc-4D-pfc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T1h-Ln-3jc"/>
+                <constraint firstItem="axt-Jl-sbn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UXR-dY-Fkg"/>
+                <constraint firstItem="axt-Jl-sbn" firstAttribute="top" secondItem="kWq-Lj-s8m" secondAttribute="bottom" constant="60" id="VLr-8G-Fqr"/>
+                <constraint firstItem="c18-ue-zFb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WQ5-cS-GI8"/>
+                <constraint firstItem="thc-4D-pfc" firstAttribute="top" secondItem="axt-Jl-sbn" secondAttribute="bottom" constant="5" id="fpv-J7-8gP"/>
+                <constraint firstItem="c18-ue-zFb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="itd-VY-raU"/>
+                <constraint firstItem="oMh-Is-fcb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mSE-oy-cSm"/>
+                <constraint firstItem="kWq-Lj-s8m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="rDB-OR-2yJ"/>
+                <constraint firstItem="oMh-Is-fcb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uSo-eJ-dVP"/>
+                <constraint firstItem="g42-gu-D4e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vyF-o5-vw0"/>
+                <constraint firstAttribute="trailing" secondItem="p5F-TX-rMh" secondAttribute="trailing" id="y9t-kT-Dvz"/>
+                <constraint firstAttribute="bottom" secondItem="oMh-Is-fcb" secondAttribute="bottom" id="ygA-Ij-hFw"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="addButton" width="502" height="512"/>
+        <image name="capacityButton" width="40" height="40"/>
+        <image name="leftBG" width="610" height="1600"/>
+        <image name="restartButton" width="40" height="40"/>
+        <image name="shade" width="952" height="113"/>
+        <image name="takeButton" width="502" height="512"/>
+    </resources>
+</document>
